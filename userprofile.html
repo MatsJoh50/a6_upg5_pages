@@ -1,35 +1,51 @@
 <!doctype html>
 <html class="html">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Bio i Göteborg - Kino</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./src/output.css"
+    />
     <script src="menu.js" defer></script>
     <script src="userprofile.js" defer></script>
-
-</head>
+  </head>
 
   <body>
-
-
     <header class="header">
       <div class="header__container">
         <a href="../index.html"
-          ><img src="../assets/headerLogo.png" alt="Header Logo" class="header__logo"
+          ><img
+            src="../assets/headerLogo.png"
+            alt="Header Logo"
+            class="header__logo"
         /></a>
         <nav class="header__topNavigation">
           <a href="../filmer.html" class="header__link">Filmer</a>
           <a href="../aboutUs.html" class="header__link">Om oss</a>
           <a href="../newsEvents.html" class="header__link">Nyheter</a>
           <a href="login.html" class="header__link">Login</a>
-
         </nav>
-        <img src="../assets/hamburgerButtonOpen.png" class="header__hamburgerButtonOpen" />
+        <img
+          src="../assets/hamburgerButtonOpen.png"
+          class="header__hamburgerButtonOpen"
+        />
       </div>
       <nav class="header__hamburgerMenuContainer">
         <div class="header__hamburgerMenu">
@@ -46,66 +62,117 @@
         </div>
       </nav>
     </header>
-
-
-<form>
-    <div class="">
-        <label for="firstName">First name:</label>
-        <input class="" id="firstName" placeholder="Enter your first name">
+    <h1 class="text-white text-2xl flex justify-center mx-auto my-3">
+      Welcome to your profile page
+    </h1>
+    <div class="min-h-80 flex m-0 items-center justify-center bg-[#333333]">
+      <div class="bg-[#404040] rounded m-2 mb-5 px-4 shadow-md w-full sm:w-96">
+        <form class="py-2 text-white" id="profileInfo">
+          <div class="my-2">
+            <label for="firstName">First name:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="firstName"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <div class="my-2">
+            <label for="lastName">Last name:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="lastName"
+              placeholder="Enter your last name"
+            />
+          </div>
+          <div class="my-2">
+            <label for="email">Email adress:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="my-2">
+            <label for="phonenumber">Phonenumber:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="phonenumber"
+              placeholder="Enter your phonenumber"
+            />
+          </div>
+          <div class="my-2">
+            <label for="homeAdress">Street adress:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="homeAdress"
+              placeholder="Enter your streed aderss"
+            />
+          </div>
+          <div class="my-2">
+            <label for="city">City:</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="city"
+              placeholder="Enter the city you live in"
+            />
+          </div>
+          <div class="my-2">
+            <label for="zipcode">Zipcode</label>
+            <input
+              class="rounded w-full h-8 pl-2 text-black"
+              id="zipcode"
+              placeholder="Enter your zipcode"
+            />
+          </div>
+          <div class="flex space-x-6 mx-auto mt-3 justify-center">
+            <button
+              action="submit"
+              id="update"
+              type="submit"
+              class="rounded bg-[#800020] hover:bg-[#800020]/75 py-1 px-2"
+            >
+              Update
+            </button>
+            <button
+              id="logout"
+              type="button"
+              class="rounded bg-[#800020] hover:bg-[#800020]/75 py-1 px-2"
+            >
+              Logout
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="">
-        <label for="lastName">Last name:</label>
-        <input class="" id="lastName" placeholder="Enter your last name">
-    </div>
-    <div class="">
-        <label for="email">Email adress:</label>
-        <input class="" id="email" placeholder="Enter your email">
-    </div>
-    <div class="">
-        <label for="phonenumber">Phonenumber:</label>
-        <input class="" id="phonenumber" placeholder="Enter your phonenumber">
-    </div>
-    <div class="">
-        <label for="homeAdress">Street adress:</label>
-        <input class="" id="homeAdress" placeholder="Enter your streed aderss">
-    </div>
-    <div class="">
-        <label for="city">City:</label>
-        <input class="" id="city" placeholder="Enter the city you live in">
-    </div>
-    <div class="">
-        <label for="zipcode">Zipcode</label>
-        <input class="" id="zipcode" placeholder="Enter your zipcode">
-    </div>
-</form>
-
-
 
     <footer class="footer">
-        <div class="footer__container">
-          <div class="footer_logoContainer">
-            <a href="../index.html"
-              ><img src="../assets/footerLogo.png" alt="Footer Logo" class="footer__logo"
-            /></a>
-          </div>
-          <div class="footer__firstContainer">
-            <h3 class="footer__heading">Kino Göteborg</h3>
-            <p class="footer__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet, nisl id consequat
-              tempor, erat dui rhoncus nisl, vel pretium lacus enim vitae ligula.
-            </p>
-          </div>
-          <div class="footer__secondContainer">
-            <h3 class="footer__heading">Navigation</h3>
-            <a href="../filmer.html" class="footer__link">Filmer</a>
-            <a href="../aboutUs.html" class="footer__link">Om oss</a>
-            <a href="../newsEvents.html" class="footer__link">Nyheter</a>
-          </div>
-          <div class="footer__thirdContainer">
-            <h3 class="footer__heading">Sociala Medier</h3>
-          </div>
+      <div class="footer__container">
+        <div class="footer_logoContainer">
+          <a href="../index.html"
+            ><img
+              src="../assets/footerLogo.png"
+              alt="Footer Logo"
+              class="footer__logo"
+          /></a>
         </div>
-      </footer>
-    </body>
-  </html>
-  
+        <div class="footer__firstContainer">
+          <h3 class="footer__heading">Kino Göteborg</h3>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            laoreet, nisl id consequat tempor, erat dui rhoncus nisl, vel
+            pretium lacus enim vitae ligula.
+          </p>
+        </div>
+        <div class="footer__secondContainer">
+          <h3 class="footer__heading">Navigation</h3>
+          <a href="../filmer.html" class="footer__link">Filmer</a>
+          <a href="../aboutUs.html" class="footer__link">Om oss</a>
+          <a href="../newsEvents.html" class="footer__link">Nyheter</a>
+        </div>
+        <div class="footer__thirdContainer">
+          <h3 class="footer__heading">Sociala Medier</h3>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

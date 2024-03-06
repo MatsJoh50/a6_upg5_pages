@@ -33,15 +33,10 @@ loginForm.addEventListener("submit", (event) => {
       if (existingUser.password === loginPassword.value) {
         console.log("Pass works");
         console.log("Welcome Master");
-
-        //add timer to logedin user for auto logout
-        const userToTime = window.localStorage.getItem(fetchUser);
-        userToTime.loginTime = new Date();
-        const addLoginUser = JSON.stringify(userToTime);
-        window.localStorage.setItem("loginUser", addLoginUser)
-        const testUser = window.localStorage.getItem("loginUser");
-        console.log(JSON.parse(testUser));
-        window.localStorage.removeItem
+        
+        existingUser.username = fetchUser;
+        window.localStorage.setItem("loginUser", JSON.stringify(existingUser))
+        window.location.href = "./userprofile.html";
 
       }  else {
         console.log("uh uh uuuh, nope");

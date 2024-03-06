@@ -7,6 +7,7 @@
         "sass:watch": "sass --no-source-map --watch src/main.scss main.css",
         "sass:compile": "sass --no-source-map src/main.scss main.css",
         "open-cypress": "cypress open",
+        "tailwind" : "npx tailwindcss -i ./main.css -o ./src/output.css --watch",
         "test": "cypress run"
     },
     "author": "",

@@ -164,7 +164,7 @@ submitForm.addEventListener("submit", (event) => {
       lastName: document.querySelector("#inputLastname").value,
       email: document.querySelector("#inputEmail").value,
       password: password.value,
-      ctrlPassword: ctrlPassword.value,
+      username: name,
     };
 
     window.localStorage.setItem(name, JSON.stringify(savedProfile));
