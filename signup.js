@@ -49,7 +49,6 @@ password.addEventListener("keyup", () => {
     strPassword.classList.remove(className);
   });
 
-  console.log(safetyCounter); // Check the safety counter in the console
   switch (safetyCounter) {
     case 0:
       // Very weak password
@@ -136,8 +135,8 @@ email.addEventListener("keyup", () => {
   const username = email.value.split("@")[0];
   const domain = email.value.split("@")[1];
   const uniqueName = username.replace(/\./g, "") + domain.split(".")[0];
-  console.log(uniqueName);
 
+  const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
   //If the user exists, clears the input field and tells the user with placeholder and border-red
   if (localStorage.getItem(uniqueName)) {
     email.classList.add("border");
@@ -147,11 +146,15 @@ email.addEventListener("keyup", () => {
     email.value = "";
     email.placeholder = "Oops, Email alredy exists";
   }
+  if (emailPattern.test(email.value)) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
 });
 
 const submitBtn = document.querySelector("#submitBtn");
 const submitForm = document.querySelector("#submitForm");
-
 
 submitForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -176,9 +179,9 @@ submitForm.addEventListener("submit", (event) => {
   } else {
     console.log("Passwords do not match or are empty.");
   }
-  try{
+  try {
     window.localStorage.removeItem("loginUser");
-  } catch (e){
+  } catch (e) {
     console.log(e);
   }
 });
