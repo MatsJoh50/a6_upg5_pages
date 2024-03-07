@@ -27,16 +27,11 @@ loginForm.addEventListener("submit", (event) => {
 
   try {
     if (existingUser != null) {
-      console.log("user exists");
       if (existingUser.password === loginPassword.value) {
-        console.log("Pass works");
-        console.log("Welcome Master");
-
         existingUser.username = fetchUser;
         window.localStorage.setItem("loginUser", JSON.stringify(existingUser));
         window.location.href = "./userprofile.html";
       } else {
-        console.log("uh uh uuuh, nope");
         submitInfo.innerText = "Wrong username or password";
         email.classList.add("border-danger");
         loginPassword.classList.add("border-danger");

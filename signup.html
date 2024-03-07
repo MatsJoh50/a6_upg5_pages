@@ -53,7 +53,7 @@
         <input type="name" id="inputLastname" class="form-control" placeholder="Lastname "  required>
         
         <label for="email" class="form-label">E-mail</label>
-        <input type="name" id="inputEmail" class="form-control" placeholder="test@example.com" aria-describedby="emailHelpBlock" required>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="inputEmail" class="form-control" placeholder="test@example.com" aria-describedby="emailHelpBlock" required>
         <div id="emailHelpBlock" class="rounded-3 mb-4">
         The email will be used as your loginname.
         </div>

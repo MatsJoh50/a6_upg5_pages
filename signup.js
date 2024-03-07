@@ -151,6 +151,8 @@ email.addEventListener("keyup", () => {
 
 const submitBtn = document.querySelector("#submitBtn");
 const submitForm = document.querySelector("#submitForm");
+
+
 submitForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const email = document.querySelector("#inputEmail").value;
@@ -173,5 +175,10 @@ submitForm.addEventListener("submit", (event) => {
     window.location.href = "./login.html";
   } else {
     console.log("Passwords do not match or are empty.");
+  }
+  try{
+    window.localStorage.removeItem("loginUser");
+  } catch (e){
+    console.log(e);
   }
 });
